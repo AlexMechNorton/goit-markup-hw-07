@@ -96,10 +96,6 @@ textarea {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-/* :hover,
-:focus {
-  transition: var(--animation-transition);
-} */
 
 /* Скрытый заголовок h2 */
 .visually-hidden {
@@ -492,7 +488,13 @@ textarea {
 /* Стилизация для lable */
 .name-input-order {
   display: block;
+  text-align: start;
   margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
 }
 
 .input-form-order {
@@ -513,9 +515,11 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  margin-left: 12px;
+  margin-right: 12px;
   margin-bottom: 30px;
   font-weight: 400;
+  font-size: 14px;
   line-height: 1.71;
   letter-spacing: var(--primary-letter-spacing);
 }
@@ -559,6 +563,9 @@ textarea {
   padding-left: 55px;
   margin-right: auto;
   margin-left: auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.89;
 
   transition: background-color var(--animation-transition);
 }
