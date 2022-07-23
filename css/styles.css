@@ -574,6 +574,8 @@ textarea {
   line-height: 1.89;
 
   transition: background-color var(--animation-transition);
+  color: var(--button-text-color);
+  background-color: var(--blue-bgc);
 }
 .btn-modal-form-order:hover,
 .btn-modal-form-order:focus {
