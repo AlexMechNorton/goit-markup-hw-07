@@ -100,6 +100,12 @@
   &:not(:last-child) {
     padding-left: 42px;
   }
+  &:focus {
+    border: 1px solid #2196f3;
+    & ~ .svg-form {
+      fill: var(--form-order-focus-fill);
+    }
+  }
 }
 
 /* Стилизация для lable */
@@ -112,19 +118,6 @@
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-}
-
-// .input-form-order {
-// //   display: block;
-// //   padding-left: 42px;
-//   /* outline: none; */
-// }
-
-.input-form-order:focus {
-  border: 1px solid #2196f3;
-}
-.input-form-order:focus ~ .svg-form {
-  fill: var(--form-order-focus-fill);
 }
 
 /* Checkbox с принятием рассылки и соглашения */
