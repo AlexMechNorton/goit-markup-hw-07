@@ -37,9 +37,9 @@
 .nav-list {
   display: flex;
   margin-left: 93px;
-}
-.nav-list .item + .item {
-  margin-left: 50px;
+  & .item + .item {
+    margin-left: 50px;
+  }
 }
 
 .nav-link {
@@ -75,10 +75,11 @@
 
 .connect {
   display: flex;
+  & .item + .item {
+    margin-left: 30px;
+  }
 }
-.connect .item + .item {
-  margin-left: 30px;
-}
+
 .conn-link {
   display: flex;
   align-items: center;
