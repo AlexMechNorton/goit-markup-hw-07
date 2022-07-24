@@ -865,9 +865,6 @@ textarea {
 }
 
 /* Секция Чем Мы занимаемся */
-/* .service .container {
-  text-align: center;
-} */
 .service-title {
   color: var(--title-text-color);
   margin-bottom: 50px;
