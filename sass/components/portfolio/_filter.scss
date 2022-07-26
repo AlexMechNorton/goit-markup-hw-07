@@ -5,11 +5,11 @@
   margin-bottom: 50px;
 }
 
-.filter-item+.filter-item {
+.filter__item+.filter__item {
   margin-left: 8px;
 }
 
-.filter-button {
+.filter__button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -30,7 +30,7 @@
   }
 }
 
-.btn-current {
+.filter__button--current {
   color: var(--button-text-color);
   background-color: #2196f3;
 }

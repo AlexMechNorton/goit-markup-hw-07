@@ -115,7 +115,7 @@ textarea {
 }
 
 /* Подсвечивание текущей страницы */
-.current:visited {
+.nav__link--current:visited {
   color: var(--hover-cont-link);
 }
 
@@ -127,7 +127,7 @@ textarea {
   border-bottom: 1px solid #ececec;
 }
 
-.head-cont {
+.head-site__container {
   min-height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -140,7 +140,7 @@ textarea {
           align-items: center;
 }
 
-.navigation {
+.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,17 +149,17 @@ textarea {
           align-items: center;
 }
 
-.nav-list {
+.nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-left: 93px;
 }
-.nav-list .item + .item {
+.nav__list .nav__item + .nav__item {
   margin-left: 50px;
 }
 
-.nav-link {
+.nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -171,10 +171,10 @@ textarea {
   -webkit-transition: color var(--animation-transition);
   transition: color var(--animation-transition);
 }
-.nav-link:hover, .nav-link:focus {
+.nav__link:hover, .nav__link:focus {
   color: var(--hover-cont-link);
 }
-.nav-link.current::after {
+.nav__link.nav__link--current:after {
   position: absolute;
   content: "";
   display: block;
@@ -186,7 +186,8 @@ textarea {
   border-radius: 2px;
 }
 
-.item {
+.nav__item,
+.connect__item {
   position: relative;
 }
 
@@ -195,11 +196,11 @@ textarea {
   display: -ms-flexbox;
   display: flex;
 }
-.connect .item + .item {
+.connect .connect__item + .connect__item {
   margin-left: 30px;
 }
 
-.conn-link {
+.connect__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,12 +213,12 @@ textarea {
   -webkit-transition: color var(--animation-transition);
   transition: color var(--animation-transition);
 }
-.conn-link:hover, .conn-link:focus {
+.connect__link:hover, .connect__link:focus {
   color: var(--hover-cont-link);
 }
 
-.i-email,
-.i-smart {
+.connect__item--email,
+.connect__item--smart {
   fill: currentColor;
   margin-right: 10px;
 }
@@ -420,15 +421,16 @@ textarea {
   line-height: 1.19;
 }
 
-.web-logo {
+.head-site__logo--web,
+.footer__logo--web {
   color: #2196f3;
 }
 
-.head-logo {
+.head-site__logo {
   color: #000000;
 }
 
-.footer-logo {
+.footer__logo {
   color: #ffffff;
 }
 
@@ -447,12 +449,12 @@ textarea {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero.jpg);
   background-color: var(--hero-bg-color);
 }
-.hero .container {
+.hero .hero__container {
   width: 696px;
   text-align: center;
 }
 
-.hero-title {
+.hero__title {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 44px;
@@ -699,11 +701,11 @@ textarea {
   margin-bottom: 50px;
 }
 
-.filter-item + .filter-item {
+.filter__item + .filter__item {
   margin-left: 8px;
 }
 
-.filter-button {
+.filter__button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -717,14 +719,14 @@ textarea {
   transition: box-shadow var(--animation-transition), background-color var(--animation-transition), color var(--animation-transition);
   transition: box-shadow var(--animation-transition), background-color var(--animation-transition), color var(--animation-transition), -webkit-box-shadow var(--animation-transition);
 }
-.filter-button:hover, .filter-button:focus {
+.filter__button:hover, .filter__button:focus {
   color: var(--button-text-color);
   background-color: #2196f3;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.btn-current {
+.filter__button--current {
   color: var(--button-text-color);
   background-color: #2196f3;
 }
@@ -816,24 +818,24 @@ textarea {
   opacity: 0;
 }
 
-.about.section {
+.about {
   padding-bottom: 0px;
 }
 
-.about-list {
+.about__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.about-item {
+.about__item {
   width: 270px;
 }
-.about-item + .about-item {
+.about__item + .about__item {
   margin-left: 30px;
 }
 
-.about-svg {
+.about__svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -849,7 +851,7 @@ textarea {
   margin-bottom: 30px;
 }
 
-.about-title {
+.about__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -859,32 +861,32 @@ textarea {
   margin-bottom: 10px;
 }
 
-.about-text {
+.about__text {
   font-size: 14px;
   line-height: 1.71;
 }
 
 /* Секция Чем Мы занимаемся */
-.service-title {
+.service__title {
   color: var(--title-text-color);
   margin-bottom: 50px;
 }
 
-.service-list {
+.service__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.service-item + .service-item {
+.service__item + .service__item {
   margin-left: 30px;
 }
 
-.service-card {
+.service__card {
   position: relative;
 }
 
-.position-servise-text {
+.servise__text-position {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -904,7 +906,7 @@ textarea {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.servise-text {
+.servise__text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -1003,22 +1005,22 @@ textarea {
 }
 
 /* секция Постоянные клиенты */
-.customers-title {
+.customers__title {
   margin-bottom: 50px;
   color: var(--title-text-color);
 }
 
-.customers-list {
+.customers__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.customers-item:nth-child(n+2) {
+.customers__item:nth-child(n+2) {
   margin-left: var(--card-set-gap);
 }
 
-.customers-link {
+.customers__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1036,12 +1038,12 @@ textarea {
   -webkit-transition: color var(--animation-transition), border var(--animation-transition);
   transition: color var(--animation-transition), border var(--animation-transition);
 }
-.customers-link:hover, .customers-link:focus {
+.customers__link:hover, .customers__link:focus {
   border: 1px solid var(--customers-hover-color);
   color: var(--customers-hover-color);
 }
 
-.customers-svg {
+.customers__svg {
   width: 106px;
   height: 60px;
   fill: currentColor;

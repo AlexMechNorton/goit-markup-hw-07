@@ -1,7 +1,8 @@
 /* Подсвечивание текущей страницы */
-.current:visited {
+.nav__link--current:visited {
   color: var(--hover-cont-link);
 }
+
 .head-site {
   font-weight: 500;
   font-size: 14px;
@@ -9,26 +10,29 @@
   letter-spacing: 0.02em;
   border-bottom: 1px solid #ececec;
 }
-.head-cont {
+
+.head-site__container {
   min-height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.navigation {
+.nav {
   display: flex;
   align-items: center;
 }
-.nav-list {
+
+.nav__list {
   display: flex;
   margin-left: 93px;
-  & .item + .item {
+
+  & .nav__item+.nav__item {
     margin-left: 50px;
   }
 }
 
-.nav-link {
+.nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -38,11 +42,13 @@
   letter-spacing: 0.02em;
   color: var(--nohover-navlink-color);
   transition: color var(--animation-transition);
+
   &:hover,
   &:focus {
     color: var(--hover-cont-link);
   }
-  &.current::after {
+
+  &.nav__link--current:after {
     position: absolute;
     content: '';
     display: block;
@@ -55,32 +61,35 @@
   }
 }
 
-.item {
+.nav__item,
+.connect__item {
   position: relative;
 }
 
 .connect {
   display: flex;
-  & .item + .item {
+
+  & .connect__item+.connect__item {
     margin-left: 30px;
   }
 }
 
-.conn-link {
+.connect__link {
   display: flex;
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primary-text-color);
   transition: color var(--animation-transition);
+
   &:hover,
   &:focus {
     color: var(--hover-cont-link);
   }
 }
 
-.i-email,
-.i-smart {
+.connect__item--email,
+.connect__item--smart {
   fill: currentColor;
   margin-right: 10px;
 }
