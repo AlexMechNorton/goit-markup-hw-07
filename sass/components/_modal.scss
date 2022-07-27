@@ -8,6 +8,7 @@
   z-index: 5;
   transition: opacity var(--animation-transition), visibility var(--animation-transition);
   background-color: var(--backdrop-bgc);
+
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -30,6 +31,7 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+
 .btn-close-modal {
   position: absolute;
   top: 8px;
@@ -46,6 +48,7 @@
   fill: #000000;
 
   transition: fill var(--animation-transition);
+
   &:hover,
   &:focus {
     fill: var(--form-order-focus-fill);
@@ -57,6 +60,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .title-form {
   margin-bottom: 12px;
 
@@ -67,6 +71,7 @@
   letter-spacing: var(--primary-letter-spacing);
   color: var(--title-text-color);
 }
+
 /* Коробки input */
 .comment-box {
   margin-bottom: 20px;
@@ -77,6 +82,7 @@
   position: relative;
   margin-bottom: 10px;
 }
+
 .svg-form {
   position: absolute;
   top: 52%;
@@ -85,6 +91,7 @@
 
   transition: fill var(--animation-transition);
 }
+
 /* Кастомизация input */
 .input-form-order {
   padding-top: 11px;
@@ -95,14 +102,17 @@
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-
+  resize: none;
   transition: border var(--animation-transition);
+
   &:not(:last-child) {
     padding-left: 42px;
   }
+
   &:focus {
     border: 1px solid #2196f3;
-    & ~ .svg-form {
+
+    &~.svg-form {
       fill: var(--form-order-focus-fill);
     }
   }
@@ -133,20 +143,24 @@
   line-height: 1.71;
   letter-spacing: var(--primary-letter-spacing);
 }
+
 .checkbox-policy {
   appearance: none;
   position: absolute;
-  &:checked + .svg-checkbox {
+
+  &:checked+.svg-checkbox {
     border-color: transparent;
     background-color: var(--blue-bgc);
     background-image: url(../images/icon-check.svg);
     background-size: contain;
     background-origin: border-box;
   }
-  &:focus + .svg-checkbox {
+
+  &:focus+.svg-checkbox {
     border-color: var(--blue-bgc);
   }
 }
+
 .svg-checkbox {
   display: inline-block;
   width: 16px;
@@ -177,8 +191,9 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.89;
-
+  letter-spacing: 0.06em;
   transition: background-color var(--animation-transition);
+
   &:hover,
   &:focus {
     background-color: #188ce8;
